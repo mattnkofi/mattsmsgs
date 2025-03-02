@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Fyra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fce4ec;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .heart-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 60px;
+            font-size: 24px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .heart-button:hover {
+            background-color: #f50057;
+            transform: scale(1.1);
+        }
+
+        .message-box {
+            width: 90%;
+            max-width: 500px;
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            display: none;
+            text-align: justify;
+            white-space: pre-wrap;
+            font-style: italic;
+        }
+
+        .show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .exit-button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #ff4081;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: none;
+        }
+
+        .exit-button:hover {
+            background-color: #f50057;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="heart-button" onclick="toggleMessage()">🐈‍⬛💗</button>
+
+    <div id="message" class="message-box">
+
+
+
+
+
+        
+        
+        
+        
+        
+        
+        hi fyra. i made this corny ahh link para medyo worth ur time yung pag abala ko sa'yo.
+
+anyway, let's get started.
+
+i know na u're still in pain after all the things i've done to you, at gusto kong ayusin if u'll give a chance. 
+alam kong ayaw mo na kasi tinapos mo na e kaso di ko mapigilan sarili ko na itry ulit na ayusin. 
+alam ko rin na i've said plenty of times na aayusin ko na, yet may mga ganito parin na nangyayari satin na nakakasakit na.
+
+i'm sorry for everything, and if u're willing to give me another shot and i mess it up again. 
+hindi na kita kukulitin ulit. mahal na kita and idk if kaya ko ba talagang talikuran nalang yung pinagsamahan natin. 
+sorry if makulit ako ngayon na pinipilit ko parin na ipush yung sarili ko sa'yo kahit sinabi ko na before u made up ur mind na di na kita pipigilan.
+
+a thousand times, i ask for ur forgiveness. sana bigyan mo pa ako ng isa pang chance na patunayan sarili ko, 
+i'm willing to change para sayo and i'll do it because i care. hindi ko isusumbat sayo na nakakasakal or nahihirapan ako na mag adjust. 
+please, consider and give me another chance?
+
+i'd respect ur decision either way if ayaw mo na talaga and u're totally done w me na :< pero hindi ko rin talaga sure sa sarili ko if tatantanan ba kita kahit ireject mo'ko after this.
+
+i'm sorry, i'm not good at this.
+
+pero please, fyra. wala na ba talagang chance na ayusin natin to? :< willing talaga akong magbago para magwork to huhu.
+
+i really appreciate everything that we've been through, and i'm sorry ulit if i'm not cut out to be the best man for u, 
+but i'm willing to be one for u. let me change my ways, let me please ur needs para magwork ulit tayo. 
+magbabago na ako, i'll be precautious if i have to. give me another chance, pls. this time, let me love u right..
+
+yuq na, hirap magtype sa lappy at 2am tas may pasok later. baka lalong mahalata na pugto ang mata sa puyat at anet.
+
+u can message me back if u like :>
+
+take care ikaw, i miss u. i miss us. i love you, fyra. goodbye
+    </div>
+
+    <button class="exit-button" id="exitBtn" onclick="exitPage()">Exit</button>
+
+    <script>
+        function toggleMessage() {
+            var message = document.getElementById("message");
+            var exitButton = document.getElementById("exitBtn");
+
+            if (message.style.display === "none" || message.style.display === "") {
+                message.style.display = "block";
+                setTimeout(() => {
+                    message.classList.add("show");
+                    exitButton.style.display = "block";
+                }, 10);
+            } else {
+                message.classList.remove("show");
+                setTimeout(() => {
+                    message.style.display = "none";
+                    exitButton.style.display = "none";
+                }, 500);
+            }
+        }
+
+        function exitPage() {
+            window.location.href = "https://www.google.com";
+        }
+    </script>
+
+</body>
+</html>
